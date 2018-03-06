@@ -1,3 +1,10 @@
+/*
+ * Basic Blinking
+ *
+ * Author : Vishnu Easwaran on
+ *
+ */
+
 #include "stm32f30x_conf.h"
 
 // create function for waiting
