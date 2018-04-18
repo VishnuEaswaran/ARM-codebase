@@ -1,7 +1,7 @@
 /*
  * Basic Blinking
  *
- * Author : Vishnu Easwaran on
+ * Author : Vishnu Easwaran 
  *
  */
 

@@ -1,4 +1,12 @@
-#include "stm32f30x.h"
+/*
+ * LCDFuctions.h
+ *
+ *  Created on: 16-Apr-2018
+ *      Author: vishnu
+ */
+
+#ifndef LCDFunctions_H_
+#define LCDFunctions_H_
 
 #define LCDport GPIOD
 #define LCDD0pin 0
@@ -39,20 +47,29 @@ void setPortAndPin (GPIO_TypeDef *port, int pin)
 	port -> PUPDR &= ~((1 << (pin*2)) | (1 << ((pin*2)+1)));
 }
 
+void intializeLED(){
+	setPortAndPin(LCDport, LCDD0pin);
+	setPortAndPin(LCDport, LCDD1pin);
+	setPortAndPin(LCDport, LCDD2pin);
+	setPortAndPin(LCDport, LCDD3pin);
+	setPortAndPin(LCDport, LCDD4pin);
+	setPortAndPin(LCDport, LCDD5pin);
+	setPortAndPin(LCDport, LCDD6pin);
+	setPortAndPin(LCDport, LCDD7pin);
+}
 
 //to send bits
 void sendBit(GPIO_TypeDef *port, int pin, uint8_t stateBit)
 {
-	if (stateBit)
-		{
+	if (stateBit){
 			port -> BSRR |= (1 << pin);
 		}
-	else
-		{
+	else{
 			port -> BRR |= GPIO_BRR_BR_0;
 		}
 
 }
+
 //to send character
 void sendCharacter(char character)
 {
@@ -66,27 +83,6 @@ void sendCharacter(char character)
 	sendBit(LCDport , LCDD7pin, character & 0b10000000);
 }
 
-void intializeLED(){
-	setPortAndPin(LCDport, LCDD0pin);
-	setPortAndPin(LCDport, LCDD1pin);
-	setPortAndPin(LCDport, LCDD2pin);
-	setPortAndPin(LCDport, LCDD3pin);
-	setPortAndPin(LCDport, LCDD4pin);
-	setPortAndPin(LCDport, LCDD5pin);
-	setPortAndPin(LCDport, LCDD6pin);
-	setPortAndPin(LCDport, LCDD7pin);
-}
 
-int main ()
-{
-	//Enable the ports and initialize
 
-	intializeLED();
-
-	sendCharacter('A');
-
-	while(1){
-		// infinite loop
-
-	}
-}
+#endif /* LCDFUCTIONS_H_ */

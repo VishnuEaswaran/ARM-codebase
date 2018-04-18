@@ -11,7 +11,7 @@ int main (void)
 	//ADC calibration
 	ADC1->CR &= ~ADC_CR_ADEN; //0 in ADCEN to diable ADC.
 
-	ADC1->CR 
+//	ADC1->CR
 
 	ADC1->CR |= ADC_CR_ADCAL; //put a 1 in calibration register
 

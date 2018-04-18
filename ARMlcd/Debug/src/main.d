@@ -26,7 +26,8 @@ src/main.o: ../src/main.c ../system/include/cmsis/stm32f30x.h \
  ../system/include/stm32f3-stdperiph/stm32f30x_tim.h \
  ../system/include/stm32f3-stdperiph/stm32f30x_usart.h \
  ../system/include/stm32f3-stdperiph/stm32f30x_wwdg.h \
- ../system/include/stm32f3-stdperiph/stm32f30x_misc.h
+ ../system/include/stm32f3-stdperiph/stm32f30x_misc.h \
+ ../src/LCDFuctions.h
 
 ../system/include/cmsis/stm32f30x.h:
 
@@ -87,3 +88,5 @@ src/main.o: ../src/main.c ../system/include/cmsis/stm32f30x.h \
 ../system/include/stm32f3-stdperiph/stm32f30x_wwdg.h:
 
 ../system/include/stm32f3-stdperiph/stm32f30x_misc.h:
+
+../src/LCDFuctions.h:

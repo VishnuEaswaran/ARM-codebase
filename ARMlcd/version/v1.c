@@ -4,7 +4,7 @@ int main ()
 {
 	// initialization
 	// setup the pin (mode, type, speed, pupd)
-	RCC -> AHBENR |= RCC_AHBENR_GPIODEN; // enabling the D
+	RCC -> AHBENR |= RCC_AHBENR_GPIODEN; // enabling the D port
 	GPIOD -> MODER = 0b01010101010101010101010101010101; // general purpose output mode; 0x55555555
 	GPIOD -> OTYPER = 0; // output push-pull
 	GPIOD -> OSPEEDR = 0xFFFFFFFF; // high speed

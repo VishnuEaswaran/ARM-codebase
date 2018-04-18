@@ -35,11 +35,11 @@ void main()
 	GPIOA -> PUPDR &= ~(GPIO_PUPDR_PUPDR0);
 
   //intialisations
-  volatile char ledState = 0; //state of led
+  volatile char ledState = 0;
   volatile char buttonPressed = 0; //button pressed variable
   volatile int buttonPressedConfidenseLevel = 0; //button pressed confidence level
   volatile int buttonReleasedConfidenceLevel = 0; //button released confidence level
-  volatile int pressedThreshold = 200; //button threshold
+  volatile int pressedThreshold = 200;//button threshold
 	while(1)
 	{
 		if(GPIOA -> IDR & GPIO_IDR_0)//check for button press IDR
