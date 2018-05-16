@@ -1726,7 +1726,7 @@ typedef struct
 #define ADC_CALFACT_CALFACT_D_6 ((uint32_t)0x00400000) /*!< ADC CALFACT_D bit 6 */
 
 /*************************  ADC Common registers  *****************************/
-/********************  Bit definition for ADC12_CSR register  ********************/
+/********************  Bit definition for 	_CSR register  ********************/
 #define ADC12_CSR_ADRDY_MST         ((uint32_t)0x00000001) /*!< Master ADC ready */
 #define ADC12_CSR_ADRDY_EOSMP_MST   ((uint32_t)0x00000002) /*!< End of sampling phase flag of the master ADC */
 #define ADC12_CSR_ADRDY_EOC_MST     ((uint32_t)0x00000004) /*!< End of regular conversion of the master ADC */
