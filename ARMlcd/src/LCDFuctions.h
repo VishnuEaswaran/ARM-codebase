@@ -24,12 +24,12 @@
 #define LCDD6Pin 6
 #define LCDD7Port GPIOD
 #define LCDD7Pin 7
-#define LCDEnablePort GPIOA
-#define LCDEnablePin 1
+#define LCDEnablePort GPIOC
+#define LCDEnablePin 11
 #define LCDRWPort GPIOA
-#define LCDRWPin 2
+#define LCDRWPin 13
 #define LCDRSPort GPIOA
-#define LCDRSPin 4
+#define LCDRSPin 11
 #define timeDelayBeforeEnable 40000
 #define timeDelayBeforeDisable 80000
 
